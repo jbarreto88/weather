@@ -1,38 +1,122 @@
-.App {
+* {
+  font-family: 'NTR', 'Arial', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #C97166;
+}
+
+.weather-search {
+  display: flex;
+  justify-content: center;
+  border: none;
+  outline: none;
+  margin-top: 35px;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 12px;
+  color: red;
+  background-color: #dea59e;
+  width: 175px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.search-input {
+  width: 200px;
+  height: 25px;
+  outline: none;
+  border: hidden;
+  border-bottom: 1px solid black;
   text-align: center;
+  font-size: 16px;
+  background-color: #C97166;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-input::placeholder {
+  color: #c4c0c0;
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-button {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background-color: #C97166;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-card {
   display: flex;
   flex-direction: column;
+  justify-content: center; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 35px auto;
+  background-color: #C97166;
+  width: 350px;
+  min-height: 400px;
+  border-radius: 10px;
+  background-color: #dea59e;
+  
+}
+
+.weather-card .date-city {
+  font-size: 14px;
+} 
+
+.weather-card .current-city {
+  font-size: 18px;
+}
+
+.date-city {
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.date-city .current-city {
+  margin-top: 10px;
+}
+
+.icon {
+  height: 150px;
+  width: 150px;
+  margin-top: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-info .temperature {
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.weather-info .description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 250px;
+  font-size: 12px;
+
+}
+
+.weather-info .high-low {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 125px;
 }
